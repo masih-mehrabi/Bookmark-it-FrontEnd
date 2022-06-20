@@ -1,0 +1,51 @@
+.nav{
+
+}
+.content {
+    background-color: rgb(28, 59, 32);
+    height: 820px;
+    padding-top: 2rem;
+    margin-top: 1rem;
+
+}
+.example-spacer {
+    flex: 1 1 auto;
+  }
+input{
+    height: 2.4rem;
+    box-sizing: border-box;
+    margin: 0.5;
+    
+}
+
+button{
+    color: rgb(28, 59, 32);
+    background-color: rgb(62, 245, 42);
+    font-weight: bold;
+    margin: 0.1rem;
+    width: 8rem;
+    height: 3rem;
+    all:center;
+    position: relative;
+    top: 0.7rem;
+
+}
+
+.mat-toolbar{
+ background-color: white;
+}
+.mat-icon {
+    color: rgb(28, 59, 32);
+    position: relative;
+    top: 00.8rem;
+}
+span{
+    color: rgb(28, 59, 32);
+    margin: 0.1rem;
+    font-size: 15;
+    font-weight: 1000;
+    position: relative;
+    top: 0.85rem;
+}
+body{
+}

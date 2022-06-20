@@ -1,0 +1,109 @@
+
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+      /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    font-size: 3rem;
+    padding-top: 2.5rem;
+    padding-left: 1.5rem;
+    color: rgb(62, 245, 42);
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.2s ease;
+}
+.features_section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 6rem 1rem;
+}
+.features_top {
+    text-align: center;
+}
+.features_top h1 {
+    margin-bottom: 1rem;
+    color: #071e55;
+    letter-spacing: 0.01rem;
+}
+.features_top p {
+    font-size: 1.1rem;
+    color: #7c8595;
+    font-weight: 100;
+    
+}
+.feature_item {
+    display: flex;
+    background-color: #fefefe;
+    border: 2px solid rgb(62, 245, 42);
+    border-radius: 1rem;
+    width: 45%;
+    margin-top: 2rem;
+}
+.features_container {
+    display: flex;
+    margin-top: 2rem;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.icon{
+    font-size: 3rem;
+    padding-top: 5rem;
+    padding-left: 1.5rem;
+    color: #7c8595;
+}
+.featureItem_Info {
+    padding: 1.5rem;
+}
+.featureItem_Info h3 {
+    color: #071e55;
+    letter-spacing: 0.1rem;
+    margin-bottom: 0.3rem;
+}
+.featureItem_Info p {
+    color: #7c8595;
+    letter-spacing: 0.1rem;
+    font-weight: 100;
+}
+.feature_item:hover {
+    border-bottom: 1px solid #1089d4;
+}
+.feature_item:hover mat-icon{
+    transform: scale(1.05);
+}
+@media(max-width: 768px) {
+    .features_container {
+        flex-direction: column;
+    }
+    .feature_item{
+        width: 100%;
+    }
+}
+
+
+
+
