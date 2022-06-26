@@ -1,5 +1,5 @@
 <div class="container">
-    <form (ngSubmit)="addBookmark()" [formGroup]="form">
+    <form  [formGroup]="form">
       <div class="top-label">
         <label>Please Provide Details of your bookmark.</label>
       </div>
@@ -20,7 +20,7 @@
           </mat-form-field>
         </li>
         <li>
-          <button mat-raised-button type="submit">{{actionBtn}}</button>
+          <button mat-raised-button (click)="call()">{{actionBtn}}</button>
         </li>
       </ul>
     </form>

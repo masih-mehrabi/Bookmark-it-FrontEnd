@@ -1,10 +1,5 @@
-.link {
-    background-color: white;
-    position: relative;
-    top: 0.9rem;
-    left: 2rem;
-    text-align: center;
-    font-weight:bold;
+html{
+  background-color: rgb(28, 59, 32);
 }
 .example-spacer {
     flex: 1 1 auto;
@@ -15,41 +10,52 @@ input{
     margin: 0.5;
     
 }
-input::placeholder{
-    color: orangered;
-    
-}
-button{
-    color: rgb(28, 59, 32);
+.btn{
     background-color: rgb(62, 245, 42);
-    font-weight: bold;
-    margin: 0.1rem;
-    width: 8rem;
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+    color: rgb(28, 59, 32);
     height: 3rem;
-    all:center;
-    position: relative;
-    top: 0.7rem;
-
 }
-h1{
-    color: black;
+.btn2{
+  height: 3rem;
+  width: 7rem;
 }
-
+.leftbtns{
+  margin-left: 1rem;
+  margin-top: 0.3rem;
+ 
+}
+.addBookmarkbtn{
+  background-color: rgb(62, 245, 42);
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  margin-top: 1rem;
+  width: 200px;
+  height: 50px;
+  color: rgb(28, 59, 32);
+}
 .mat-toolbar{
  background-color: white;
+  height: 80px;
+  position: sticky;
+  top: 0; 
+  z-index: 100; 
 }
 .mat-icon {
     color: rgb(28, 59, 32);
     position: relative;
-    top: 00.8rem;
+    top: 0.4rem;
 }
 span{
-    color: rgb(28, 59, 32);
-    margin: 0.1rem;
-    font-size: 15;
-    font-weight: 1000;
-    position: relative;
-    top: 0.85rem;
+  color: rgb(28, 59, 32);
+  margin: 0.1rem;
+  font-size: 15;
+  font-weight: 1000;
+  position: relative;
+  top: 0.4rem;
+    
 }
 table {
     width: 100%;
@@ -58,6 +64,7 @@ table {
   .mat-form-field {
     font-size: 14px;
     width: 100%;
+    background-color: white;
   }
   
   td, th {
@@ -67,3 +74,37 @@ table {
     max-width: 1300px;
     margin: 0 auto;
   }
+ table{
+   background-color: rgb(28, 59, 32);
+ }
+ ::ng-deep th.mat-header-cell{
+  width: 140px;
+  min-width: 140px;
+  color: white;
+}
+::ng-deep td.mat-cell{
+  width: 140px;
+  min-width: 140px;
+  color: white;
+}
+.deletebtn{
+  color: red;
+  position: relative;
+  bottom: 20%;
+}
+.editbtn{
+  color: white;
+}
+
+.filterlabel{
+  color: rgb(28, 59, 32);
+  font-weight: bold;
+  background-color: white;
+}
+.filterinput{
+  color: rgb(28, 59, 32);
+  background-color: white;
+}
+.mat-form-field-appearance-standard .mat-form-field-underline {
+  background-color: black;
+}

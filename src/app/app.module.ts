@@ -24,7 +24,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { AddBookmarkDialogComponent } from './components/add-bookmark-dialog/add-bookmark-dialog.component';
 import { AuthGuard } from './guard/auth.guard';
-
+import { DatePipe } from '@angular/common';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -35,8 +36,7 @@ import { AuthGuard } from './guard/auth.guard';
     BookmarkMainComponent,
     EditUserComponent,
     HomepageComponent,
-    AddBookmarkDialogComponent
-   
+    AddBookmarkDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,6 +55,7 @@ import { AuthGuard } from './guard/auth.guard';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+    MatSnackBarModule
     
   ],
   providers: [
@@ -68,6 +69,9 @@ import { AuthGuard } from './guard/auth.guard';
       provide: MatDialogRef,
       useValue: {}
     },
+    {
+      provide: DatePipe
+    }
   ],
   bootstrap: [AppComponent]
 })

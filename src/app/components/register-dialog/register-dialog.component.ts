@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { AuthInterceptor } from 'src/app/interceptor/auth.interceptor';
 import { UserRegisterService } from 'src/app/services/user-services/user-register.service';
@@ -15,7 +16,9 @@ export class RegisterDialogComponent implements OnInit {
   constructor(
     private userRegisterService: UserRegisterService,
     private dialogRef: MatDialogRef<RegisterDialogComponent>,
-    private router: Router
+    private router: Router,
+  
+    
     ) { }
   form: any;
   ngOnInit(): void {
@@ -33,9 +36,13 @@ export class RegisterDialogComponent implements OnInit {
 
   signup() {
     if(this.form.valid) {
-      this.userRegisterService.signup(this.form.value).subscribe((result:any) =>{
-        
+      this.userRegisterService.signup(this.form.value).subscribe({
+        next:
+        (result:any) =>{
         this.dialogRef.close(this.router.navigate(['bookmark']))
+      }, error:(err)=> {
+        alert(err.message);
+      }
       })
     }
   }

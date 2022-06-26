@@ -1,0 +1,84 @@
+
+.example-spacer {
+    flex: 1 1 auto;
+  }
+.nav{
+  // height: 500px;
+}
+input{
+  margin-top: 2%;
+  text-align: center;
+  font-size: large;
+  color: white;
+}
+button{
+    color: white;
+    background-color: green;
+    font-weight: bold;
+    width: 100px;
+    all:center;
+    position: relative;
+    
+    top: 0.7rem;
+   margin-left: 1rem;
+   margin-bottom: 1.5rem;
+
+}
+mat-form-field {
+  position: relative;
+  left: 10%;
+  // top: 2%;
+    // font-size: 14px;
+    width: 80%;
+     border: 0.8rem  rgb(62, 245, 42);
+    background-color: green;
+    // height: 50px;
+    // // margin-left: 2rem;
+    // // margin-right: 3rem;
+    text-align: center;
+  }
+  mat-label{
+    margin-left: 2%;
+    color: white;
+  }
+  .mat-hint {
+    margin-left: 2%;
+    color: white;
+  }
+.container{
+    width: 80%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    // margin-top: 5rem;
+    position:absolute;
+    background-color: white;
+    // border: 5px solid rgb(62, 245, 42);
+  }
+  ::ng-deep .mat-form-field-underline {
+    display: none;
+}
+.frm-button {
+  position:absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+// body{
+//   background-color: rgb(42, 69, 46);
+// }
+mat-toolbar{
+  height: 80px;
+  position: sticky;
+  background-color: white;
+    top: 0; 
+    z-index: 100; 
+}
+form{
+  margin-top: 2%;
+}
+.logo, .logo-icon {
+  color: green ;
+  font-weight: 1000;
+}
+

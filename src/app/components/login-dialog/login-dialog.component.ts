@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { AuthInterceptor } from 'src/app/interceptor/auth.interceptor';
 import { UserLoginService } from 'src/app/services/user-services/user-login.service';
-import { BehaviorSubject, Observable } from 'rxjs';
 @Component({
   selector: 'app-login-dialog',
   templateUrl: './login-dialog.component.html',
@@ -16,7 +16,8 @@ export class LoginDialogComponent implements OnInit {
   constructor(
     private userLoginService: UserLoginService,
     private router: Router,
-    private dialogRef: MatDialogRef<LoginDialogComponent>
+    private dialogRef: MatDialogRef<LoginDialogComponent>,
+    private snackbar: MatSnackBar,
     
     
     
@@ -37,9 +38,13 @@ export class LoginDialogComponent implements OnInit {
   signin() {
     
     if(this.form.valid) {
-      this.userLoginService.signin(this.form.value).subscribe((result:any) => {
+      this.userLoginService.signin(this.form.value).subscribe({
+        next: (result:any) => {
         localStorage.setItem('token', result.access_token );
         this.dialogRef.close(this.router.navigate(['bookmark']))
+      }, error:(err) => {
+        this.snackbar.open('');
+      }
       })
 
     }

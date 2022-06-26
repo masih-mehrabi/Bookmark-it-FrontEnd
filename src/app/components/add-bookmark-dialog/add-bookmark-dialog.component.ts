@@ -1,7 +1,7 @@
 import { Component, Inject, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { PostBookmarkService } from 'src/app/services/bookmark-services/post-bookmark.service';
+import { BookmarkService } from 'src/app/services/bookmark-services/bookmark.service';
 
 @Component({
   selector: 'app-add-bookmark-dialog',
@@ -13,11 +13,9 @@ export class AddBookmarkDialogComponent implements OnInit {
   actionBtn: string = 'Add Bookmark';
   constructor(
     private formBuilder: FormBuilder,
-    private addBookmarkService: PostBookmarkService,
     @Inject(MAT_DIALOG_DATA) public editData: any,
     private dialogRef: MatDialogRef<AddBookmarkDialogComponent>,
-    
-
+    private bookmarkSerive: BookmarkService
   ) {}
    
 
@@ -35,20 +33,36 @@ export class AddBookmarkDialogComponent implements OnInit {
       this.form.controls['description'].setValue(this.editData.description);
       this.form.controls['link'].setValue(this.editData.link);
     }
+    console.log(this.editData);
   }
 
   
     
-  
-  addBookmark() {
-    if(!this.editData)
-    {
-      if(this.form.valid) {
-        this.addBookmarkService.addBookmark(this.form.value).subscribe((result) => {
-        })
-        this.dialogRef.close('saved');
-      }
+  call() {
+    if(!this.editData){
+      this.addBookmark();
+    }else {
+      this.updateBookmark();
     }
-   
+  }
+  addBookmark() {
+    
+      if(this.form.valid) {
+        this.bookmarkSerive.addBookmark(this.form.value).subscribe((result) => {
+          this.dialogRef.close('save');
+        })
+      }
+    
+  }
+
+  updateBookmark() {
+    if(this.form.valid){
+      this.bookmarkSerive.updateBookmark(this.form.value, this.editData.id).subscribe((result)=>{
+        alert('Bookmark Updated')
+        this.form.reset();
+       console.log(result);
+       this.dialogRef.close('update');
+    });
+    } 
   }
 }
