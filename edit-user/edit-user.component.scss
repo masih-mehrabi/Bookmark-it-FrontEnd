@@ -1,0 +1,80 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+input {
+  margin-top: 2%;
+  text-align: center;
+  font-size: large;
+  color: white;
+}
+button {
+  color: rgb(42, 69, 46);
+  background-color: rgb(62, 245, 42);
+  font-weight: bold;
+  width: 8rem;
+  height: 3rem;
+  all: center;
+  position: relative;
+  top: 0.7rem;
+  margin-left: 1rem;
+  margin-bottom: 1.5rem;
+}
+mat-form-field {
+  position: relative;
+  left: 10%;
+  width: 80%;
+  border: 0.2rem solid rgb(62, 245, 42);
+  background-color: white;
+  text-align: center;
+}
+input{
+  color: rgb(42, 69, 46);
+  font-size: 20px;
+  caret-color: rgb(42, 69, 46);
+}
+
+mat-label {
+  margin-left: 2%;
+  color: rgb(42, 69, 46);
+}
+.mat-hint {
+  margin-left: 2%;
+  color: rgb(42, 69, 46);
+  font-size: small;
+  
+}
+.container {
+  width: 80%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;  position: absolute;
+  background-color: rgb(42, 69, 46);
+}
+::ng-deep .mat-form-field-underline {
+  display: none;
+}
+.frm-button {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+
+}
+body{
+  background-color: rgb(42, 69, 46);
+}
+mat-toolbar {
+  height: 80px;
+  position: sticky;
+  background-color: white;
+  top: 0;
+  z-index: 100;
+}
+form {
+  margin-top: 2%;
+}
+.logo,
+.logo-icon {
+  color: rgb(42, 69, 46);
+  font-weight: 1000;
+}

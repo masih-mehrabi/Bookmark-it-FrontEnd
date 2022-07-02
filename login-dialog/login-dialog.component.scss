@@ -1,0 +1,68 @@
+.top-label {
+  background-color: rgb(62, 245, 42);
+  color: rgb(28, 59, 32);
+  position: relative;
+  top: 0.6rem;
+  text-align: center;
+  width: 480px;
+  font-size: larger;
+  left: 2.1rem;
+  height: 25px;
+}
+
+ul {
+  list-style-type: none;
+  width: 500px;
+  justify-content: left;
+  float: left;
+}
+li {
+  margin: 0.1rem;
+}
+
+.container {
+  background-color: rgb(28, 59, 32);
+  display: flex;
+}
+form {
+  width: 100%;
+  overflow: hidden;
+  background-color: rgb(28, 59, 32);
+  justify-content: left;
+  width: 100%;
+  margin: 0 auto;
+  // border-color: rgb(62, 245, 42);
+  // border-style:solid;
+}
+button {
+  width: 465px;
+  background-color: rgb(62, 245, 42);
+  color: rgb(28, 59, 32);
+  margin-top: 00.5rem;
+}
+.mat-form-field {
+  background-color: white;
+  width: 450px;
+  margin: 0.2rem;
+  border-color: rgb(62, 245, 42);
+  border-style: solid;
+  float: left;
+  color: rgb(28, 59, 32);
+  height: 50px;
+}
+::ng-deep .mat-dialog-container {
+  background-color: rgb(28, 59, 32);
+  border-style: solid;
+  border-color: rgb(62, 245, 42);
+}
+input {
+  font-size: 25px;
+  color: rgb(28, 59, 32);
+}
+input::placeholder {
+  color: rgb(28, 59, 32);
+}
+
+::ng-deep .mat-form-field-underline {
+  display: none;
+}
