@@ -13,9 +13,8 @@ import { GetUserInfoService } from 'src/app/services/user-services/get-user-info
 export class EditUserComponent implements OnInit {
   form!: FormGroup;
   user: any = {};
-  
 
-  
+  date = new Date();
   constructor(
     private getUserInfoService: GetUserInfoService,
     private datePipe: DatePipe,
@@ -37,29 +36,39 @@ export class EditUserComponent implements OnInit {
       email: new FormControl(''),
     });
   }
+  
 
   getUserInfo() {
     this.getUserInfoService.getUserInfo().subscribe((result) => {
       console.log(result);
       this.user = result;
       this.form.patchValue({
-        createdAt: this.datePipe.transform(new Date(this.user.createdAt)),
-        updatedAt: this.datePipe.transform(new Date(this.user.updatedAt)),
+        createdAt: this.datePipe.transform(
+          new Date (this.user.createdAt),
+          'EEEE, MMMM d, y, h:mm:ss a, zzzz'
+        ),
+        updatedAt: this.datePipe.transform(
+          new Date(this.user.updatedAt),
+          'EEEE, MMMM d, y, h:mm:ss a, zzzz'
+        ),
       });
     });
   }
   editInformation() {
     if (this.form.valid) {
       this.getUserInfoService
-        .editUserInfo(this.form.value)
-        .subscribe((result) => {
-          this.snackbar.showNotification('Information Updated', 'Close', 'success')
-          this.getUserInfo();
-        });
+        .editUserInfo(this.form.value.firstName && this.form.value.lastName && this.form.value.email)
+        .subscribe( {
+          next:(result) => {
+            this.getUserInfo();
+            this.snackbar.showNotification('Information Updated', 'Dismiss', 'success');
+          }});
+        };
     }
-  }
+  
   logout() {
     localStorage.removeItem('token');
     this.router.navigate(['']);
+    this.snackbar.showNotification('Logged out Successfully','Dismiss','success')
   }
 }

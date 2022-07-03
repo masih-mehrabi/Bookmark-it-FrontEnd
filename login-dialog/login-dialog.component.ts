@@ -38,7 +38,7 @@ export class LoginDialogComponent implements OnInit {
           this.snackbar.showNotification('Your are logged in', 'OK', 'success');
         },
         error: (err) => {
-          this.snackbar.showNotification(err.message, 'OK', 'error');
+          this.snackbar.showNotification('Incorrect Credentials', 'OK', 'error');
         },
       });
     }

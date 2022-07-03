@@ -37,11 +37,11 @@ export class RegisterDialogComponent implements OnInit {
         next: (result: any) => {
           localStorage.setItem('token', result.access_token);
           this.dialogRef.close(this.router.navigate(['bookmark']));
-          this.snackbar.showNotification('Your are logged in', 'OK', 'success');
+          this.snackbar.showNotification('Your are logged in, Welcome!!1', 'OK', 'success');
         },
         error: (err) => {
           this.snackbar.showNotification(
-            'There is already an account registered with the provided email address!!! ',
+            'The Provided email is not in correct format or,there is already an account registered with the provided email address!!! ',
             'OK',
             'error'
           );

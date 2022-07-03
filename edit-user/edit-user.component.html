@@ -13,6 +13,7 @@
         <mat-form-field appearance="legacy">
           <mat-label>Id</mat-label>
           <input
+            value={{user.id}}
             readonly="readonly"
             formControlName="id"
             matInput
@@ -48,7 +49,7 @@
         <mat-form-field appearance="legacy">
           <mat-label>First Name</mat-label>
           <input
-          value={{user.firstName}}
+            value={{user.firstName}}
             formControlName="firstName"
             matInput
           />

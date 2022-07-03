@@ -67,7 +67,6 @@ export class AddBookmarkDialogComponent implements OnInit {
             'success'
           );
           this.form.reset();
-          console.log(result);
           this.dialogRef.close('update');
         });
     }
