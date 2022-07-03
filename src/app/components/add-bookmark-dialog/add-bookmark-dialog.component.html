@@ -1,27 +1,42 @@
 <div class="container">
-    <form  [formGroup]="form">
-      <div class="top-label">
-        <label>Please Provide Details of your bookmark.</label>
-      </div>
-      <ul class="unordered">
-        <li>
-          <mat-form-field>
-            <input formControlName="title" type="text" matInput placeholder="Title" />
-          </mat-form-field>
-        </li>
-        <li>
-          <mat-form-field>
-            <input formControlName="description" matInput type="text" placeholder="Description" />
-          </mat-form-field>
-        </li>
-        <li>
-          <mat-form-field>
-            <input formControlName="link" matInput type="text" placeholder="Link" />
-          </mat-form-field>
-        </li>
-        <li>
-          <button mat-raised-button (click)="call()">{{actionBtn}}</button>
-        </li>
-      </ul>
-    </form>
-  </div>
+  <form [formGroup]="form">
+    <div class="top-label">
+      <label>Please Provide Details of your bookmark.</label>
+    </div>
+    <ul class="unordered">
+      <li>
+        <mat-form-field>
+          <input
+            formControlName="title"
+            type="text"
+            matInput
+            placeholder="Title"
+          />
+        </mat-form-field>
+      </li>
+      <li>
+        <mat-form-field>
+          <input
+            formControlName="description"
+            matInput
+            type="text"
+            placeholder="Description"
+          />
+        </mat-form-field>
+      </li>
+      <li>
+        <mat-form-field>
+          <input
+            formControlName="link"
+            matInput
+            type="text"
+            placeholder="Link"
+          />
+        </mat-form-field>
+      </li>
+      <li>
+        <button mat-raised-button (click)="call()">{{ actionBtn }}</button>
+      </li>
+    </ul>
+  </form>
+</div>

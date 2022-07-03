@@ -6,22 +6,24 @@ import { AuthGuard } from './guard/auth.guard';
 import { HomepageComponent } from './homepage/homepage.component';
 
 const routes: Routes = [
-{
-  path: '',
-  component: HomepageComponent
-},
-{
-  path: 'bookmark',
-  component: BookmarkMainComponent,canActivate:[AuthGuard] 
-},
-{
-  path: 'useredit',
-  component: EditUserComponent, canActivate: [AuthGuard]
-}
+  {
+    path: '',
+    component: HomepageComponent,
+  },
+  {
+    path: 'bookmark',
+    component: BookmarkMainComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'useredit',
+    component: EditUserComponent,
+    canActivate: [AuthGuard],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

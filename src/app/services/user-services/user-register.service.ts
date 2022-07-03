@@ -4,15 +4,11 @@ import { UserRegister } from 'src/app/interfaces/user.-register.interface';
 import { baseUrl } from 'src/environments/environment';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UserRegisterService {
-
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
   signup(data: UserRegister) {
-    return (
-      this.http.post(`${baseUrl}auth/signup`, data)
-      );
-    
+    return this.http.post(`${baseUrl}auth/signup`, data);
   }
 }

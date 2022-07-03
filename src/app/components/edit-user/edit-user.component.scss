@@ -1,84 +1,85 @@
-
 .example-spacer {
-    flex: 1 1 auto;
-  }
-.nav{
-  // height: 500px;
+  flex: 1 1 auto;
 }
-input{
+input {
   margin-top: 2%;
   text-align: center;
   font-size: large;
   color: white;
 }
-button{
-    color: white;
-    background-color: green;
-    font-weight: bold;
-    width: 100px;
-    all:center;
-    position: relative;
-    
-    top: 0.7rem;
-   margin-left: 1rem;
-   margin-bottom: 1.5rem;
-
+button {
+  color: rgb(42, 69, 46);
+  background-color: rgb(62, 245, 42);
+  font-weight: bold;
+  width: 8rem;
+  height: 3rem;
+  all: center;
+  position: relative;
+  top: 0.7rem;
+  margin-left: 1rem;
+  margin-bottom: 1.5rem;
 }
 mat-form-field {
   position: relative;
   left: 10%;
-  // top: 2%;
-    // font-size: 14px;
-    width: 80%;
-     border: 0.8rem  rgb(62, 245, 42);
-    background-color: green;
-    // height: 50px;
-    // // margin-left: 2rem;
-    // // margin-right: 3rem;
-    text-align: center;
-  }
-  mat-label{
-    margin-left: 2%;
-    color: white;
-  }
-  .mat-hint {
-    margin-left: 2%;
-    color: white;
-  }
-.container{
-    width: 80%;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0 auto;
-    // margin-top: 5rem;
-    position:absolute;
-    background-color: white;
-    // border: 5px solid rgb(62, 245, 42);
-  }
-  ::ng-deep .mat-form-field-underline {
-    display: none;
+  width: 80%;
+  border: 0.2rem solid rgb(62, 245, 42);
+  background-color: white;
+  text-align: center;
+}
+input{
+  color: rgb(42, 69, 46);
+  font-size: 20px;
+  caret-color: rgb(42, 69, 46);
+}
+
+mat-label {
+  font-size: medium;
+  color: rgb(42, 69, 46);
+}
+.mat-hint {
+  margin-left: 2%;
+  color: rgb(42, 69, 46);
+  font-size: small;
+  
+}
+.container {
+  width: 80%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;  position: absolute;
+  background-color: rgb(42, 69, 46);
+}
+::ng-deep .mat-form-field-underline {
+  display: none;
 }
 .frm-button {
-  position:absolute;
+  position: absolute;
   left: 50%;
   transform: translate(-50%);
+
 }
-// body{
-//   background-color: rgb(42, 69, 46);
-// }
-mat-toolbar{
+body{
+  background-color: rgb(42, 69, 46);
+}
+mat-toolbar {
   height: 80px;
   position: sticky;
   background-color: white;
-    top: 0; 
-    z-index: 100; 
+  top: 0;
+  z-index: 100;
+  height: 80px;
 }
-form{
+form {
   margin-top: 2%;
 }
-.logo, .logo-icon {
-  color: green ;
+.logo,
+.logo-icon {
+  color: rgb(28, 59, 32);
+  margin: 0.1rem;
+  font-size: 15;
   font-weight: 1000;
+  position: relative;
+  top: 0.4rem;
 }
-

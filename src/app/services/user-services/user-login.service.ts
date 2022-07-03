@@ -7,25 +7,12 @@ import { UserLogin } from 'src/app/interfaces/user.login.interface';
 import { baseUrl } from 'src/environments/environment';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UserLoginService {
-  
-  
+  constructor(private http: HttpClient) {}
 
-  constructor(private http: HttpClient) { }
-
- 
-
-
-
-  
-
-
-
-  signin(data: UserLogin):Observable<any> {
-    return this.http.post(`${baseUrl}auth/signin`, data)
+  signin(data: UserLogin): Observable<any> {
+    return this.http.post(`${baseUrl}auth/signin`, data);
   }
-  
-  
 }

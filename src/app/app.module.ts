@@ -5,17 +5,17 @@ import { AppComponent } from './app.component';
 import { LoginDialogComponent } from './components/login-dialog/login-dialog.component';
 import { RegisterDialogComponent } from './components/register-dialog/register-dialog.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
-import {MatButtonModule} from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {MatDialogModule, MatDialogRef} from '@angular/material/dialog';
-import {MatTableModule} from '@angular/material/table';
-import { HomepageDetailsComponent } from './components/homepage-details/homepage-details.component'
+import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
+import { MatTableModule } from '@angular/material/table';
+import { HomepageDetailsComponent } from './components/homepage-details/homepage-details.component';
 import { AuthInterceptor } from './interceptor/auth.interceptor';
 import { BookmarkMainComponent } from './bookmark-main/bookmark-main.component';
 import { EditUserComponent } from './components/edit-user/edit-user.component';
@@ -26,6 +26,7 @@ import { AddBookmarkDialogComponent } from './components/add-bookmark-dialog/add
 import { AuthGuard } from './guard/auth.guard';
 import { DatePipe } from '@angular/common';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { NotifierComponent } from './components/notifier/notifier.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     EditUserComponent,
     HomepageComponent,
     AddBookmarkDialogComponent,
+    NotifierComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,7 +49,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatDialogModule,
     FormsModule,
     MatFormFieldModule,
-    MatIconModule,MatInputModule,
+    MatIconModule,
+    MatInputModule,
     MatToolbarModule,
     HttpClientModule,
     ReactiveFormsModule,
@@ -55,24 +58,23 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    MatSnackBarModule
-    
+    MatSnackBarModule,
   ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,
-      multi: true
+      multi: true,
     },
     AuthGuard,
     {
       provide: MatDialogRef,
-      useValue: {}
+      useValue: {},
     },
     {
-      provide: DatePipe
-    }
+      provide: DatePipe,
+    },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

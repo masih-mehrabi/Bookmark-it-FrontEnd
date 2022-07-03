@@ -1,64 +1,82 @@
-
-  
-    <mat-toolbar>
-      <mat-icon class="logo-icon">bookmark</mat-icon>
-      <span class="logo" routerLink="/">Bookmark it!</span>
-      <span class="example-spacer"></span>
-      <button  routerLink="/bookmark" mat-button>
-        Bookmarks
-      </button>      
-      <button (click)="logout()" mat-raised-button color="warn">Log Out</button>
-    </mat-toolbar>
-  
+<mat-toolbar>
+  <mat-icon class="logo-icon">bookmark</mat-icon>
+  <span class="logo" routerLink="/">Bookmark it!</span>
+  <span class="example-spacer"></span>
+  <button routerLink="/bookmark" mat-button>Bookmarks</button>
+  <button (click)="logout()" mat-raised-button color="warn">Log Out</button>
+</mat-toolbar>
 
 <body>
-<div class="container">
-  <form [formGroup]="form">
-    <p>
-      <mat-form-field appearance="legacy">
-        <mat-label>Id</mat-label>
-        <input readonly="readonly" formControlName="id" matInput placeholder="Placeholder">
-        <mat-hint>Not-changeable</mat-hint>
-      </mat-form-field>
-    </p>
-    <p>
-      <mat-form-field appearance="legacy">
-        <mat-label>Created At</mat-label>
-        <input readonly="readonly" formControlName="createdAt" matInput placeholder="Placeholder">
-        <mat-hint>Not-changeable</mat-hint>
-      </mat-form-field>
-    </p>
-    <p>
-      <mat-form-field appearance="legacy">
-        <mat-label>Updated At</mat-label>
-        <input readonly="readonly" formControlName="updatedAt" matInput placeholder="Placeholder">
-        <mat-hint>Not-changeable</mat-hint>
-      </mat-form-field>
-    </p>
-    <p>
-      <mat-form-field appearance="legacy">
-        <mat-label>First Name</mat-label>
-        <input formControlName="firstName" matInput placeholder="Placeholder">
-        <mat-hint>Changeable</mat-hint>
-      </mat-form-field>
-    </p>
-    <p>
-      <mat-form-field appearance="legacy">
-        <mat-label>Last Name</mat-label>
-        <input formControlName="lastName" matInput placeholder="Placeholder">
-        <mat-hint>Changeable</mat-hint>
-      </mat-form-field>
-    </p>
-    <p>
-      <mat-form-field appearance="legacy">
-        <mat-label>Email</mat-label>
-        <input formControlName="email" matInput placeholder="Placeholder">
-        <mat-hint>Changeable</mat-hint>
-      </mat-form-field>
-    </p>
-    <div class="frm-button">
-      <button mat-raised-button (click)="editInformation()">Update</button>
-    </div>
-  </form>
-</div>
+  <div class="container">
+    <form [formGroup]="form">
+      <p>
+        <mat-form-field appearance="legacy">
+          <mat-label>Id</mat-label>
+          <input
+            value={{user.id}}
+            readonly="readonly"
+            formControlName="id"
+            matInput
+            value={{user.id}}
+          />
+          <mat-hint>Not-changeable</mat-hint>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="legacy">
+          <mat-label>Created At</mat-label>
+          <input
+          
+            readonly="readonly"
+            formControlName="createdAt"
+            matInput
+          />
+          <mat-hint>Not-changeable</mat-hint>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="legacy">
+          <mat-label>Updated At</mat-label>
+          <input
+            readonly="readonly"
+            formControlName="updatedAt"
+            matInput
+          />
+          <mat-hint>Not-changeable</mat-hint>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="legacy">
+          <mat-label>First Name</mat-label>
+          <input
+            value={{user.firstName}}
+            formControlName="firstName"
+            matInput
+          />
+          <mat-hint>Changeable</mat-hint>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="legacy">
+          <mat-label>Last Name</mat-label>
+          <input
+            value={{user.lastName}}
+            formControlName="lastName"
+            matInput
+          />
+          <mat-hint>Changeable</mat-hint>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="legacy">
+          <mat-label>Email</mat-label>
+          <input formControlName="email" value={{user.email}} matInput/>
+          <mat-hint>Changeable</mat-hint>
+        </mat-form-field>
+      </p>
+      <div class="frm-button">
+        <button mat-raised-button (click)="editInformation()">Update</button>
+      </div>
+    </form>
+  </div>
 </body>

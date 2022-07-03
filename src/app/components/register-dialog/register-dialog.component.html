@@ -1,32 +1,36 @@
 <div class="container">
-    <form (ngSubmit)="signup()" [formGroup]="form">
-      <div class="top-label">
-        <label>Please Provide the Following Information!</label>
-      </div>
-        <ul class="unordered">
-            <li>
-                <mat-form-field>
-                    <input matInput formControlName="firstName" placeholder="First Name"/>
-                  </mat-form-field> 
-            </li>
-            <li>
-                <mat-form-field >
-                    <input matInput formControlName="lastName"  placeholder="Last Name">
-                  </mat-form-field>
-            </li>
-            <li>
-                <mat-form-field>
-                    <input matInput formControlName="email" placeholder="Email">
-                  </mat-form-field>
-            </li>
-            <li>
-              <mat-form-field >
-                <input matInput formControlName="password" placeholder="Password">
-              </mat-form-field>
-            </li>
-            <li>
-              <button mat-raised-button type="submit">Register</button>
-            </li>
-          </ul>
-        </form>
+  <form (ngSubmit)="signup()" [formGroup]="form">
+    <div class="top-label">
+      <label>Please Provide the Following Information!</label>
+    </div>
+    <ul class="unordered">
+      <li>
+        <mat-form-field>
+          <input
+            matInput
+            formControlName="firstName"
+            placeholder="First Name"
+          />
+        </mat-form-field>
+      </li>
+      <li>
+        <mat-form-field>
+          <input matInput formControlName="lastName" placeholder="Last Name" />
+        </mat-form-field>
+      </li>
+      <li>
+        <mat-form-field>
+          <input matInput formControlName="email" placeholder="Email" />
+        </mat-form-field>
+      </li>
+      <li>
+        <mat-form-field>
+          <input matInput formControlName="password" placeholder="Password" type="password" />
+        </mat-form-field>
+      </li>
+      <li>
+        <button mat-raised-button type="submit">Register</button>
+      </li>
+    </ul>
+  </form>
 </div>

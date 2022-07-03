@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "bookmark-it-298fb": {
+      "hosting": {
+        "Bookmark-it": [
+          "bookmark-it-298fb"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "bookmark-it-298fb"
+  }
+}

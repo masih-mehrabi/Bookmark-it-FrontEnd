@@ -1,32 +1,31 @@
-html{
+html {
   background-color: rgb(28, 59, 32);
+  width: 100%;
 }
 .example-spacer {
-    flex: 1 1 auto;
-  }
-input{
-    height: 2.4rem;
-    box-sizing: border-box;
-    margin: 0.5;
-    
+  flex: 1 1 auto;
 }
-.btn{
-    background-color: rgb(62, 245, 42);
-    margin-right: 0.5rem;
-    margin-top: 0.5rem;
-    color: rgb(28, 59, 32);
-    height: 3rem;
+input {
+  height: 2.4rem;
+  box-sizing: border-box;
+  margin: 0.5;
 }
-.btn2{
+.btn {
+  background-color: rgb(62, 245, 42);
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+  color: rgb(28, 59, 32);
+  height: 3rem;
+}
+.btn2 {
   height: 3rem;
   width: 7rem;
 }
-.leftbtns{
+.leftbtns {
   margin-left: 1rem;
   margin-top: 0.3rem;
- 
 }
-.addBookmarkbtn{
+.addBookmarkbtn {
   background-color: rgb(62, 245, 42);
   position: absolute;
   left: 50%;
@@ -36,75 +35,96 @@ input{
   height: 50px;
   color: rgb(28, 59, 32);
 }
-.mat-toolbar{
- background-color: white;
+mat-toolbar {
+  background-color: white;
   height: 80px;
   position: sticky;
-  top: 0; 
-  z-index: 100; 
+  top: 0;
+  z-index: 100;
+  width: 100%;
 }
-.mat-icon {
-    color: rgb(28, 59, 32);
-    position: relative;
-    top: 0.4rem;
-}
-span{
+
+span, .mat-icon {
   color: rgb(28, 59, 32);
   margin: 0.1rem;
   font-size: 15;
   font-weight: 1000;
   position: relative;
   top: 0.4rem;
-    
 }
 table {
-    width: 100%;
-  }
-  
-  .mat-form-field {
-    font-size: 14px;
-    width: 100%;
-    background-color: white;
-  }
-  
-  td, th {
-    width: 25%;
-  }
-  .container{
-    max-width: 1300px;
-    margin: 0 auto;
-  }
- table{
-   background-color: rgb(28, 59, 32);
- }
- ::ng-deep th.mat-header-cell{
-  width: 140px;
-  min-width: 140px;
-  color: white;
+  width: 100%;
 }
-::ng-deep td.mat-cell{
-  width: 140px;
-  min-width: 140px;
-  color: white;
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+  background-color: white;
 }
-.deletebtn{
+
+// td,
+// th {
+//   width: 25%;
+  
+// }
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+table {
+  background-color: rgb(28, 59, 32);
+  width: 100%;
+  // overflow: scroll;
+  
+  
+}
+th{
+  color: white;
+  width:min-content;
+}
+td{
+  color: white;
+  white-space: normal;
+  max-width: 0;
+  word-wrap: break-word;
+  padding: 1rem;
+  
+}
+
+.deletebtn {
   color: red;
   position: relative;
   bottom: 20%;
 }
-.editbtn{
-  color: white;
+.editbtn {
+  color: rgb(62, 245, 42);
 }
 
-.filterlabel{
+.filterlabel {
   color: rgb(28, 59, 32);
   font-weight: bold;
   background-color: white;
 }
-.filterinput{
+.filterinput {
   color: rgb(28, 59, 32);
   background-color: white;
 }
 .mat-form-field-appearance-standard .mat-form-field-underline {
-  background-color: black;
+  color: white;
+}
+.mat-column-id {
+  width: 5%;
+}
+.mat-column-description {
+  width: 25%;
+}
+.mat-column-title {
+  width: 25%;
+}
+.mat-column-link {
+  width: 25%;
+}
+
+html{
+  overflow: hidden;
 }
